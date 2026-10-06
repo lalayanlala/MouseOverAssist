@@ -1,29 +1,29 @@
 [
-  {
-    "Author": "Yuta",
-    "Name": "MouseOverAssist",
-    "InternalName": "MouseOverAssist",
-    "AssemblyVersion": "2.1.0.0",
-    "Description": "日本語の設定画面で、ジョブ別の対象ルール・先行入力・地面設置・操作補助を設定できます。/moaで開きます。ReActionを基にした派生版です。",
-    "ApplicableVersion": "any",
-    "Tags": [
-      "mouseover",
-      "target",
-      "healer"
-    ],
-    "DalamudApiLevel": 15,
-    "LoadRequiredState": 0,
-    "LoadSync": false,
-    "CanUnloadAsync": false,
-    "LoadPriority": 0,
-    "Punchline": "対象ルールと戦闘操作を、日本語で自分好みに。",
-    "Changelog": "V2.1: アクションルール画面をReActionのAction Stackを参考に再設計。基本設定と詳細設定を分離し、日本語説明を改善。",
-    "AcceptsFeedback": true,
-    "RepoUrl": "https://github.com/lalayanlala/MouseOverAssist",
-    "DownloadLinkInstall": "https://github.com/lalayanlala/MouseOverAssist/releases/download/v2.1.0.0/latest.zip",
-    "DownloadLinkUpdate": "https://github.com/lalayanlala/MouseOverAssist/releases/download/v2.1.0.0/latest.zip",
-    "IsHide": false,
-    "IsTestingExclusive": false,
-    "LastUpdate": "1791256418"
-  }
+{
+    "Author":  "Yuta",
+    "Name":  "MouseOverAssist",
+    "InternalName":  "MouseOverAssist",
+    "AssemblyVersion":  "2.1.0.0",
+    "Description":  "日本語の設定画面で、ジョブ別の対象ルール・先行入力・地面設置・操作補助を設定できます。/moaで開きます。ReActionを基にした派生版です。",
+    "ApplicableVersion":  "any",
+    "Tags":  [
+                 "mouseover",
+                 "target",
+                 "healer"
+             ],
+    "DalamudApiLevel":  15,
+    "LoadRequiredState":  0,
+    "LoadSync":  false,
+    "CanUnloadAsync":  false,
+    "LoadPriority":  0,
+    "Punchline":  "対象ルールと戦闘操作を、日本語で自分好みに。",
+    "Changelog":  "V2.1: アクションルール画面をReActionのAction Stackを参考に再設計。基本設定と詳細設定を分離し、日本語説明を改善。",
+    "AcceptsFeedback":  true,
+    "RepoUrl":  "https://github.com/lalayanlala/MouseOverAssist",
+    "DownloadLinkInstall":  "https://github.com/lalayanlala/MouseOverAssist/releases/download/v2.1.0.0/latest.zip",
+    "DownloadLinkUpdate":  "https://github.com/lalayanlala/MouseOverAssist/releases/download/v2.1.0.0/latest.zip",
+    "IsHide":  false,
+    "IsTestingExclusive":  false,
+    "LastUpdate":  "1791257569"
+}
 ]
