@@ -3,8 +3,8 @@
     "Author":  "Yuta",
     "Name":  "MouseOverAssist",
     "InternalName":  "MouseOverAssist",
-    "AssemblyVersion":  "1.0.1.0",
-    "Description":  "味方対象スキルをUI・キャラ本体のマウスオーバー対象に使用します。ジョブ別設定、スキル別ON/OFF、通常発動へのフォールバックに対応。",
+    "AssemblyVersion":  "2.0.0.0",
+    "Description":  "日本語の設定画面で、ジョブ別の対象ルール・先行入力・地面設置・操作補助を設定できます。/moaで開きます。ReActionを基にした派生版です。",
     "ApplicableVersion":  "any",
     "Tags":  [
                  "mouseover",
@@ -16,13 +16,14 @@
     "LoadSync":  false,
     "CanUnloadAsync":  false,
     "LoadPriority":  0,
-    "Punchline":  "ターゲットを変えずにマウスオーバーで回復・バフ。",
+    "Punchline":  "対象ルールと戦闘操作を、日本語で自分好みに。",
+    "Changelog":  "V2: 日本語の独自UI、ジョブ別対象ルール、戦闘操作補助を追加。",
     "AcceptsFeedback":  true,
     "RepoUrl":  "https://github.com/lalayanlala/MouseOverAssist",
-    "DownloadLinkInstall":  "https://github.com/lalayanlala/MouseOverAssist/releases/download/v1.0.1.0/latest.zip",
-    "DownloadLinkUpdate":  "https://github.com/lalayanlala/MouseOverAssist/releases/download/v1.0.1.0/latest.zip",
+    "DownloadLinkInstall":  "https://github.com/lalayanlala/MouseOverAssist/releases/download/v2.0.0.0/latest.zip",
+    "DownloadLinkUpdate":  "https://github.com/lalayanlala/MouseOverAssist/releases/download/v2.0.0.0/latest.zip",
     "IsHide":  false,
     "IsTestingExclusive":  false,
-    "LastUpdate":  "1791251971"
+    "LastUpdate":  "1791253539"
 }
 ]
