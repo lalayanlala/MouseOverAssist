@@ -1,8 +1,8 @@
 [
 {
     "Author":  "Yuta",
-    "Name":  "YutaMouseOver",
-    "InternalName":  "YutaMouseOver",
+    "Name":  "MouseOverAssist",
+    "InternalName":  "MouseOverAssist",
     "AssemblyVersion":  "1.0.1.0",
     "Description":  "味方対象スキルをUI・キャラ本体のマウスオーバー対象に使用します。ジョブ別設定、スキル別ON/OFF、通常発動へのフォールバックに対応。",
     "ApplicableVersion":  "any",
@@ -23,6 +23,6 @@
     "DownloadLinkUpdate":  "https://github.com/lalayanlala/MouseOverAssist/releases/download/v1.0.1.0/latest.zip",
     "IsHide":  false,
     "IsTestingExclusive":  false,
-    "LastUpdate":  "1791251210"
+    "LastUpdate":  "1791251971"
 }
 ]
