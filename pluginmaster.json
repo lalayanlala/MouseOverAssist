@@ -1,0 +1,28 @@
+[
+{
+    "Author":  "Yuta",
+    "Name":  "YutaMouseOver",
+    "InternalName":  "YutaMouseOver",
+    "AssemblyVersion":  "1.0.1.0",
+    "Description":  "味方対象スキルをUI・キャラ本体のマウスオーバー対象に使用します。ジョブ別設定、スキル別ON/OFF、通常発動へのフォールバックに対応。",
+    "ApplicableVersion":  "any",
+    "Tags":  [
+                 "mouseover",
+                 "target",
+                 "healer"
+             ],
+    "DalamudApiLevel":  15,
+    "LoadRequiredState":  0,
+    "LoadSync":  false,
+    "CanUnloadAsync":  false,
+    "LoadPriority":  0,
+    "Punchline":  "ターゲットを変えずにマウスオーバーで回復・バフ。",
+    "AcceptsFeedback":  true,
+    "RepoUrl":  "https://github.com/lalayanlala/YutaMouseOver",
+    "DownloadLinkInstall":  "https://github.com/lalayanlala/YutaMouseOver/releases/download/v1.0.1.0/latest.zip",
+    "DownloadLinkUpdate":  "https://github.com/lalayanlala/YutaMouseOver/releases/download/v1.0.1.0/latest.zip",
+    "IsHide":  false,
+    "IsTestingExclusive":  false,
+    "LastUpdate":  "1791250771"
+}
+]
