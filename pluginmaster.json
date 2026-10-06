@@ -3,7 +3,7 @@
     "Author":  "Yuta",
     "Name":  "MouseOverAssist",
     "InternalName":  "MouseOverAssist",
-    "AssemblyVersion":  "2.2.1.0",
+    "AssemblyVersion":  "2.3.0.0",
     "Description":  "日本語の設定画面で、ジョブ別の対象ルール・先行入力・地面設置・操作補助を設定できます。/moaで開きます。ReActionを基にした派生版です。",
     "ApplicableVersion":  "any",
     "Tags":  [
@@ -17,13 +17,13 @@
     "CanUnloadAsync":  false,
     "LoadPriority":  0,
     "Punchline":  "対象ルールと戦闘操作を、日本語で自分好みに。",
-    "Changelog":  "V2.2.1: ビルド警告を整理。非推奨の距離APIをCurrentDistanceへ移行し、実行時注入フィールドと無効化済みコード由来の警告を解消。警告が1件でも出る場合はビルドを失敗させる検証を追加。",
+    "Changelog":  "V2.3: 設定ミス自動検出、リアルタイム判定モニター、アイコン付きアクション検索、ルール一覧の要約表示、ドラッグ操作による優先順位変更を追加。",
     "AcceptsFeedback":  true,
     "RepoUrl":  "https://github.com/lalayanlala/MouseOverAssist",
-    "DownloadLinkInstall":  "https://github.com/lalayanlala/MouseOverAssist/releases/download/v2.2.1.0/latest.zip",
-    "DownloadLinkUpdate":  "https://github.com/lalayanlala/MouseOverAssist/releases/download/v2.2.1.0/latest.zip",
+    "DownloadLinkInstall":  "https://github.com/lalayanlala/MouseOverAssist/releases/download/v2.3.0.0/latest.zip",
+    "DownloadLinkUpdate":  "https://github.com/lalayanlala/MouseOverAssist/releases/download/v2.3.0.0/latest.zip",
     "IsHide":  false,
     "IsTestingExclusive":  false,
-    "LastUpdate":  "1791258842"
+    "LastUpdate":  "1791261172"
 }
 ]
