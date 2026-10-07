@@ -3,7 +3,7 @@
     "Author": "Yuta",
     "Name": "MouseOverAssist",
     "InternalName": "MouseOverAssist",
-    "AssemblyVersion": "2.3.6.0",
+    "AssemblyVersion": "2.3.7.0",
     "Description": "日本語の設定画面で、ジョブ別の対象ルール・先行入力・地面設置・操作補助を設定できます。/moaで開きます。ReActionを基にした派生版です。",
     "ApplicableVersion": "any",
     "Tags": [
@@ -17,14 +17,14 @@
     "CanUnloadAsync": false,
     "LoadPriority": 0,
     "Punchline": "対象ルールと戦闘操作を、日本語で自分好みに。",
-    "Changelog": "V2.3.6: 共通・ロール技のジョブ適合判定を修正。ClassJobCategoryを文字列リフレクションで判定する処理を廃止し、API 15の実ジョブフラグを直接参照する方式へ変更。現在ジョブのみONでも、使用可能な共通・ロール技が正しく表示されるよう修正。",
+    "Changelog": "V2.3.7: 現在ジョブ/共通・ロール技フィルターを再修正。ClassJobCategoryの生成プロパティではなくシート上のジョブ可否ビットを直接読み、チェック状態を1つの判定関数に統合。選択画面に現在ジョブIDとフィルター状態も表示。",
     "AcceptsFeedback": true,
     "RepoUrl": "https://github.com/lalayanlala/MouseOverAssist",
-    "DownloadLinkInstall": "https://github.com/lalayanlala/MouseOverAssist/releases/download/v2.3.6.0/latest.zip",
-    "DownloadLinkUpdate": "https://github.com/lalayanlala/MouseOverAssist/releases/download/v2.3.6.0/latest.zip",
+    "DownloadLinkInstall": "https://github.com/lalayanlala/MouseOverAssist/releases/download/v2.3.7.0/latest.zip",
+    "DownloadLinkUpdate": "https://github.com/lalayanlala/MouseOverAssist/releases/download/v2.3.7.0/latest.zip",
     "IsHide": false,
     "IsTestingExclusive": false,
-    "LastUpdate": "1791356033"
+    "LastUpdate": "1791356746"
   },
   {
     "Author": "Caraxi / Japanese localization",
