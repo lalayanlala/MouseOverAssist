@@ -3,7 +3,7 @@
     "Author": "Lulua",
     "Name": "MouseOverAssist",
     "InternalName": "MouseOverAssist",
-    "AssemblyVersion": "2.3.11.0",
+    "AssemblyVersion": "2.3.12.0",
     "Description": "日本語の設定画面で、ジョブ別の対象ルール・先行入力・地面設置・操作補助を設定できます。/moaで開きます。ReActionを基にした派生版です。",
     "ApplicableVersion": "any",
     "Tags": [
@@ -17,14 +17,14 @@
     "CanUnloadAsync": false,
     "LoadPriority": 0,
     "Punchline": "対象ルールと戦闘操作を、日本語で自分好みに。",
-    "Changelog": "V2.3.11: 「共通・ロール技のみ」でギャザラー/クラフターのロールアクションまで表示される問題を修正。戦闘ジョブに対応する共通・ロール技だけを対象にし、採集・製作アクションを除外。",
+    "Changelog": "V2.3.12: アクション検索をジョブ名にも対応。例として「暗」と入力すると暗黒騎士で使用できるアクションを検索できるよう改善。技名・ID・習得Lv検索も維持。",
     "AcceptsFeedback": true,
     "RepoUrl": "https://github.com/lalayanlala/MouseOverAssist",
-    "DownloadLinkInstall": "https://github.com/lalayanlala/MouseOverAssist/releases/download/v2.3.11.0/latest.zip",
-    "DownloadLinkUpdate": "https://github.com/lalayanlala/MouseOverAssist/releases/download/v2.3.11.0/latest.zip",
+    "DownloadLinkInstall": "https://github.com/lalayanlala/MouseOverAssist/releases/download/v2.3.12.0/latest.zip",
+    "DownloadLinkUpdate": "https://github.com/lalayanlala/MouseOverAssist/releases/download/v2.3.12.0/latest.zip",
     "IsHide": false,
     "IsTestingExclusive": false,
-    "LastUpdate": "1791359808"
+    "LastUpdate": "1791386972"
   },
   {
     "Author": "Caraxi / Japanese localization",
