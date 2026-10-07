@@ -3,7 +3,7 @@
     "Author": "Lulua",
     "Name": "MouseOverAssist",
     "InternalName": "MouseOverAssist",
-    "AssemblyVersion": "2.3.8.0",
+    "AssemblyVersion": "2.3.9.0",
     "Description": "日本語の設定画面で、ジョブ別の対象ルール・先行入力・地面設置・操作補助を設定できます。/moaで開きます。ReActionを基にした派生版です。",
     "ApplicableVersion": "any",
     "Tags": [
@@ -17,14 +17,14 @@
     "CanUnloadAsync": false,
     "LoadPriority": 0,
     "Punchline": "対象ルールと戦闘操作を、日本語で自分好みに。",
-    "Changelog": "V2.3.8: V2.3.3で動作していたアクション抽出条件を基準に共通・ロール技の回帰を修正。共有/ロール判定をClassJob有効性チェックより先に行い、救出・エスナ・迅速魔など正規ロール技を保持しつつ、ジョブ専用の旧PvP/NPC/内部用残存アクションは引き続き除外。",
+    "Changelog": "V2.3.9: アクション選択の2つのチェックを独立した表示モードとして修正。両方ON=現在ジョブ+共通・ロール技、現在ジョブのみON=現在ジョブ専用技のみ、共通・ロール技のみON=共通・ロール技のみ、両方OFF=有効な全アクション。作者表示をLuluaへ変更。",
     "AcceptsFeedback": true,
     "RepoUrl": "https://github.com/lalayanlala/MouseOverAssist",
-    "DownloadLinkInstall": "https://github.com/lalayanlala/MouseOverAssist/releases/download/v2.3.8.0/latest.zip",
-    "DownloadLinkUpdate": "https://github.com/lalayanlala/MouseOverAssist/releases/download/v2.3.8.0/latest.zip",
+    "DownloadLinkInstall": "https://github.com/lalayanlala/MouseOverAssist/releases/download/v2.3.9.0/latest.zip",
+    "DownloadLinkUpdate": "https://github.com/lalayanlala/MouseOverAssist/releases/download/v2.3.9.0/latest.zip",
     "IsHide": false,
     "IsTestingExclusive": false,
-    "LastUpdate": "1791357595"
+    "LastUpdate": "1791358716"
   },
   {
     "Author": "Caraxi / Japanese localization",
