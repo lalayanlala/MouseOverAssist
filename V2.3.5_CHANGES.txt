@@ -1,0 +1,6 @@
+MouseOverAssist V2.3.5
+
+- V2.3.4で共通・ロールアクションまで除外される回帰を修正。
+- ClassJob=0 は正規のロール/共通アクションで使用されるため、プレイヤーアクション・有効なClassJobCategory・PvE/PvP条件を満たす場合は保持。
+- 0xFFFFFFFF などの不正な非0 ClassJob参照は引き続き除外。
+- 「現在ジョブのみ」「共通・ロール技」「PvPの技のみ」のUIは維持。

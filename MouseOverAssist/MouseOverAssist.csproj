@@ -1,0 +1,27 @@
+<Project Sdk="Dalamud.NET.Sdk/15.0.0">
+  <PropertyGroup>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <OutputType>Library</OutputType>
+    <AssemblyName>MouseOverAssist</AssemblyName>
+    <Version>2.3.14</Version>
+    <Nullable>disable</Nullable>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <IsPackable>false</IsPackable>
+    <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
+    <Authors>Lulua</Authors>
+    <Author>Lulua</Author>
+    <Name>MouseOverAssist</Name>
+    <InternalName>MouseOverAssist</InternalName>
+    <AssemblyVersion>2.3.14.0</AssemblyVersion>
+    <FileVersion>2.3.14.0</FileVersion>
+    <DalamudApiLevel>15</DalamudApiLevel>
+    <ApplicableVersion>any</ApplicableVersion>
+    <Punchline>対象ルールと戦闘操作を、日本語で自分好みに。</Punchline>
+    <Tags>mouseover;target;healer</Tags>
+    <LoadSync>true</LoadSync>
+    <Description>対象の優先順位・ジョブ別ルール・先行入力・地面設置・操作補助を設定できます。/moaで設定。ReActionを基にした派生版です。</Description>
+    <PackageLicenseFile>../LICENSE.txt</PackageLicenseFile>
+  </PropertyGroup>
+</Project>

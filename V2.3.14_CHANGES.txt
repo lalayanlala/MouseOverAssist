@@ -1,0 +1,5 @@
+MouseOverAssist V2.3.14
+
+- PronounModule.ResolvePlaceholder のフック引数を Dalamud API 15 の正式な定義に合わせました。
+- コンテンツ中に対象解決が実行された際のメモリ破損・クラッシュ原因を解消しました。
+- 日本語UI、対象ルール、先行入力、地面設置、操作補助など既存機能は維持しています。

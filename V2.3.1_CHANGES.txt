@@ -1,0 +1,7 @@
+MouseOverAssist V2.3.1 / 2.3.1.0
+
+- Fixed action picker combo popup expanding across most/all of the game screen.
+- Added maximum popup size for action, target and job combo menus.
+- Reduced action list child height to keep search/options and list within a compact popup.
+- Action and target combo popups now close after selection.
+- Existing V2.3 rule diagnostics, live decision monitor, action search and drag-and-drop ordering are unchanged.

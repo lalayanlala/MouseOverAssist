@@ -1,0 +1,6 @@
+MouseOverAssist V2.3.2 / 2.3.2.0
+
+- Added "マクロコスモスと起爆を別ボタンにする". Macrocosmos (25874) remains on its own hotbar button while Microcosmos (25875) can be placed separately.
+- Replaced the hotbar-placement action combo with a dedicated bounded popup so the selector no longer stretches to the bottom/edge of the game screen.
+- Added quick-select buttons for Liturgy detonation (28509), Stellar Detonation (8324), and Microcosmos (25875).
+- Kept the V2.2.1 zero-warning build gate and all V2.3/V2.3.1 UX features.

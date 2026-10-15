@@ -1,0 +1,13 @@
+MouseOverAssist V2
+
+ReAction: UnknownX / https://github.com/UnknownX7/ReAction
+Commit: 9436e0c72c569b5518c67bda2e29f44822c68ea0
+License: Affero General Public License v1 (LICENSE.txt)
+Includes action handling and combat assistance adapted from ReAction.
+The Japanese sidebar UI, job scoping, migration and rule presets are MouseOverAssist changes.
+
+Hypostasis: UnknownX / https://github.com/UnknownX7/Hypostasis
+Commit: c230760c7bbc85a6e37b8477012dcd92ab700dc7
+Bundled source matches the ReAction pinned submodule; upstream has no separate license file.
+
+Complete corresponding source is included in this archive.

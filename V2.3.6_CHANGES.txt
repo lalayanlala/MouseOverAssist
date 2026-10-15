@@ -1,0 +1,7 @@
+MouseOverAssist V2.3.6
+
+- 共通・ロール技が「現在ジョブのみ」ON時に消える問題を修正。
+- 原因だった ClassJobCategory.GetProperty(ジョブ略称) のリフレクション判定を廃止。
+- Dalamud API 15 / Lumina の ClassJobCategory ジョブフラグを直接参照して現在ジョブ適合を判定。
+- 通常のアクション選択と「配置するスキル」の両方に同じ修正を適用。
+- V2.3.4以降の旧PvP/NPC/内部用アクション除外と「PvPの技のみ」フィルターは維持。

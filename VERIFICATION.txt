@@ -1,0 +1,59 @@
+MouseOverAssist V2.3.8 review
+
+- Project/manifest version set to 2.3.8.0.
+- V2.2.1 warning-zero build gate is retained (TreatWarningsAsErrors=true).
+- Added structural rule diagnostics and standalone tests for:
+  * missing triggers / candidates
+  * duplicates
+  * wildcard redundancy
+  * disabled incomplete rules
+  * upper-rule shadowing including modifier-key coverage
+- Added runtime decision tracing, but tracing is collected only while the settings window is open to avoid normal-combat string/list allocation overhead.
+- Added searchable action picker with icons/name/ID/level and current-job-centered filtering.
+- Added rule-list summaries and diagnostic status.
+- Added mouse drag reordering for rule rows, trigger rows, and candidate rows; arrow buttons remain as a fallback.
+- Static source review completed: C# delimiter balance and manifest JSON syntax checked.
+- Final plugin compilation must be performed on Windows with the user's Dalamud API 15 reference directory. BUILD.bat will fail if any compiler warning remains.
+
+- Combo popup size limits added for action/target/job selectors; selection close behavior checked by source review.
+
+- V2.3.2: Added Macrocosmos decombo path (25874) with separate Microcosmos hotbar action (25875).
+- V2.3.2: Replaced only the hotbar-placement selector with a bounded popup; normal Action Stack selectors remain unchanged.
+
+- V2.3.3: Action picker now filters IsPlayerAction=true, IsPvP=false and ActionCategory 2/3/4.
+- V2.3.3: Current-job matching uses ClassJobCategory job flags instead of treating ClassJob=0 as automatically shared.
+- V2.3.3: Current-job and shared/role filters are independent.
+- V2.3.3: Global diagnostics summary exposes detailed reasons via a popup.
+- V2.3.3: Removed the Macrocosmos decombo option added in V2.3.2.
+
+- V2.3.4: Rejects actions whose direct ClassJob reference does not resolve to a battle class/job (filters legacy/internal rows such as 0xFFFFFFFF).
+- V2.3.4: PvP-only filter added to both action pickers; OFF selects PvE, ON selects PvP.
+
+- V2.3.5: Restores valid ClassJob=0 shared/role player actions accidentally filtered in V2.3.4.
+- V2.3.5: Invalid nonzero ClassJob references are still rejected, preserving the stale/internal action cleanup.
+
+- V2.3.6: Removed reflection-based ClassJobCategory job matching from action pickers.
+- V2.3.6: Current-job filtering now reads Lumina ClassJobCategory flags directly, including AST and healer role actions.
+
+- V2.3.7: Current-job compatibility reads the ClassJobCategory raw bit at RowOffset + 4 + ClassJob.RowId, matching the sheet layout (ADV at +4, GLA at +5, AST 33 at +37).
+- V2.3.7: Action and placement pickers share one filter function, so current-job/shared-role toggles cannot diverge between pickers.
+- V2.3.7: Picker header shows current job ID and active shared-role/PvE-PvP state for runtime verification.
+
+- V2.3.8 regression fix: base action eligibility is restored to the V2.3.3 conditions (plus PvE/PvP toggle).
+- V2.3.8 regression fix: shared/role actions are accepted before validating Action.ClassJob, preventing legitimate role actions with special ClassJob values from being removed.
+- V2.3.8 stale-data filter: only non-shared job-specific actions are rejected when their ClassJob does not resolve to a real battle job.
+
+V2.3.9:
+- Action picker checkbox truth table is enforced by RulePolicy.ActionPickerApplies and covered by 10 build-time checks.
+- Current only + shared/role => current job-specific plus shared/role.
+- Current only => current job-specific only. Shared/role only => shared/role only. Neither => all valid actions.
+- Author metadata changed from Yuta to Lulua in project and plugin manifest.
+
+V2.3.10:
+- Both action-picker checkboxes ON now requires supportsCurrentJob for both job-specific and shared/role actions.
+- Build-time truth-table test includes shared/role action unsupported by current job => excluded.
+
+V2.3.11:
+- Shared/role classification now requires the action's ClassJobCategory to support at least one battle job.
+- DoH/DoL actions with IsRoleAction=true are not classified as combat shared/role actions.
+- Five build-time checks cover battle role, gather/craft role rejection, shared battle action, job-specific action, and non-battle shared data.
