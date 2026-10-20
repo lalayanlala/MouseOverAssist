@@ -41,5 +41,5 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         shell: pwsh
         run: |
-          $tag = (Get-Content .\Release\MouseOverAssist.json -Raw | ConvertFrom-Json).AssemblyVersion
+          $tag = (Get-Content .\Output\MouseOverAssist.json -Raw | ConvertFrom-Json).AssemblyVersion
           gh release create "v$tag" .\Release\latest.zip .\Release\MouseOverAssist_V2_Source.zip --title "MouseOverAssist v$tag" --notes "V2.3.15: アクション名・ジョブ名・ロール名を常に日本語で表示するよう修正しました。"
