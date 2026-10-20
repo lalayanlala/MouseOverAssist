@@ -3,7 +3,7 @@
     <TargetFramework>net10.0-windows</TargetFramework>
     <OutputType>Library</OutputType>
     <AssemblyName>MouseOverAssist</AssemblyName>
-    <Version>2.3.14</Version>
+    <Version>2.3.15</Version>
     <Nullable>disable</Nullable>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <ImplicitUsings>disable</ImplicitUsings>
@@ -14,8 +14,8 @@
     <Author>Lulua</Author>
     <Name>MouseOverAssist</Name>
     <InternalName>MouseOverAssist</InternalName>
-    <AssemblyVersion>2.3.14.0</AssemblyVersion>
-    <FileVersion>2.3.14.0</FileVersion>
+    <AssemblyVersion>2.3.15.0</AssemblyVersion>
+    <FileVersion>2.3.15.0</FileVersion>
     <DalamudApiLevel>15</DalamudApiLevel>
     <ApplicableVersion>any</ApplicableVersion>
     <Punchline>対象ルールと戦闘操作を、日本語で自分好みに。</Punchline>

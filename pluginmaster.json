@@ -3,7 +3,7 @@
     "Author": "Lulua",
     "Name": "MouseOverAssist",
     "InternalName": "MouseOverAssist",
-    "AssemblyVersion": "2.3.14.0",
+    "AssemblyVersion": "2.3.15.0",
     "Description": "日本語の設定画面で、ジョブ別の対象ルール・先行入力・地面設置・操作補助を設定できます。/moaで開きます。ReActionを基にした派生版です。",
     "ApplicableVersion": "any",
     "Tags": [
@@ -17,11 +17,11 @@
     "CanUnloadAsync": false,
     "LoadPriority": 0,
     "Punchline": "対象ルールと戦闘操作を、日本語で自分好みに。",
-    "Changelog": "V2.3.14: コンテンツ中のクラッシュ原因となっていたPronounModule.ResolvePlaceholderのフック定義をDalamud API 15の正しい型へ修正。",
+    "Changelog": "V2.3.15: アクション名・ジョブ名・ロール名を常に日本語で表示するよう修正。ゲームを英語クライアントで起動していても、日本語で検索できます。",
     "AcceptsFeedback": true,
     "RepoUrl": "https://github.com/lalayanlala/MouseOverAssist",
-    "DownloadLinkInstall": "https://github.com/lalayanlala/MouseOverAssist/releases/download/v2.3.14.0/latest.zip",
-    "DownloadLinkUpdate": "https://github.com/lalayanlala/MouseOverAssist/releases/download/v2.3.14.0/latest.zip",
+    "DownloadLinkInstall": "https://github.com/lalayanlala/MouseOverAssist/releases/download/v2.3.15.0/latest.zip",
+    "DownloadLinkUpdate": "https://github.com/lalayanlala/MouseOverAssist/releases/download/v2.3.15.0/latest.zip",
     "IsHide": false,
     "IsTestingExclusive": false,
     "LastUpdate": "1792061211"

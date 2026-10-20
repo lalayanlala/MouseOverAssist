@@ -45,7 +45,7 @@ try {
     # Full matching source accompanies the binary Release.
     $sourceStage = Join-Path $PSScriptRoot ('.source-stage-' + [Guid]::NewGuid().ToString('N'))
     New-Item -ItemType Directory -Path $sourceStage | Out-Null
-    foreach ($sourceName in @('MouseOverAssist','Tests','BUILD.bat','Build.ps1','global.json','nuget.config','PREPARE_REPOSITORY.bat','PrepareRepository.ps1','README_JA.txt','V2.3_CHANGES.txt','V2.3.1_CHANGES.txt','V2.3.2_CHANGES.txt','V2.3.3_CHANGES.txt','V2.3.4_CHANGES.txt','V2.3.5_CHANGES.txt','V2.3.6_CHANGES.txt','V2.3.7_CHANGES.txt','V2.3.8_CHANGES.txt','V2.3.9_CHANGES.txt','V2.3.10_CHANGES.txt','V2.3.11_CHANGES.txt','V2.3.12_CHANGES.txt','V2.3.13_CHANGES.txt','V2.3.14_CHANGES.txt','VERIFICATION.txt','LICENSE.txt','THIRD_PARTY_NOTICES.txt')) {
+    foreach ($sourceName in @('MouseOverAssist','Tests','BUILD.bat','Build.ps1','global.json','nuget.config','PREPARE_REPOSITORY.bat','PrepareRepository.ps1','README_JA.txt','V2.3_CHANGES.txt','V2.3.1_CHANGES.txt','V2.3.2_CHANGES.txt','V2.3.3_CHANGES.txt','V2.3.4_CHANGES.txt','V2.3.5_CHANGES.txt','V2.3.6_CHANGES.txt','V2.3.7_CHANGES.txt','V2.3.8_CHANGES.txt','V2.3.9_CHANGES.txt','V2.3.10_CHANGES.txt','V2.3.11_CHANGES.txt','V2.3.12_CHANGES.txt','V2.3.13_CHANGES.txt','V2.3.14_CHANGES.txt','V2.3.15_CHANGES.txt','VERIFICATION.txt','LICENSE.txt','THIRD_PARTY_NOTICES.txt')) {
         Copy-Item -LiteralPath (Join-Path $PSScriptRoot $sourceName) -Destination $sourceStage -Recurse
     }
     Get-ChildItem -LiteralPath $sourceStage -Directory -Recurse | Where-Object { $_.Name -in @('bin','obj') } | Remove-Item -Recurse -Force

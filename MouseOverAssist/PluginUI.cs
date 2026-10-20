@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Numerics;
+using Dalamud.Game;
 using Dalamud.Bindings.ImGui;
 using Dalamud.Interface.Textures;
 using Lumina.Excel.Sheets;
@@ -315,7 +316,7 @@ public static class PluginUI
         if (ImGui.BeginCombo("##Job", JobName(stack.JobId)))
         {
             if (ImGui.Selectable("すべてのジョブ", stack.JobId == 0)) { stack.JobId = 0; save = true; }
-            foreach (var j in DalamudApi.DataManager.GetExcelSheet<ClassJob>().Where(x => x.RowId > 0 && x.Name.ToString().Length > 0))
+            foreach (var j in DalamudApi.DataManager.GetExcelSheet<ClassJob>(ClientLanguage.Japanese).Where(x => x.RowId > 0 && x.Name.ToString().Length > 0))
             {
                 if (ImGui.Selectable($"{j.Name}##job{j.RowId}", stack.JobId == j.RowId))
                 {
@@ -602,7 +603,7 @@ public static class PluginUI
         if (stackIndex < 0 || stackIndex >= C.ActionStacks.Count) return diagnostics;
 
         var stack = C.ActionStacks[stackIndex];
-        if (stack.JobId != 0 && DalamudApi.DataManager.GetExcelSheet<ClassJob>().GetRowOrDefault(stack.JobId) is null)
+        if (stack.JobId != 0 && DalamudApi.DataManager.GetExcelSheet<ClassJob>(ClientLanguage.Japanese).GetRowOrDefault(stack.JobId) is null)
             diagnostics.Add(new RuleDiagnostic(RuleDiagnosticSeverity.Error, $"ジョブ ID {stack.JobId} がゲームデータに見つかりません。"));
 
         foreach (var action in stack.Actions)
@@ -793,8 +794,8 @@ public static class PluginUI
             stack.Actions.Count > 256 || stack.Items.Count > 256 || stack.Actions.Any(x => x == null) || stack.Items.Any(x => x == null))
             throw new InvalidOperationException();
     }
-    private static string JobName(uint id) => id==0?"すべてのジョブ":DalamudApi.DataManager.GetExcelSheet<ClassJob>().GetRowOrDefault(id)?.Name.ToString()??$"ジョブ {id}";
-    private static string ActionName(uint id) => DalamudApi.DataManager.GetExcelSheet<Lumina.Excel.Sheets.Action>().GetRowOrDefault(id)?.Name.ToString()??$"ID {id}";
+    private static string JobName(uint id) => id==0?"すべてのジョブ":DalamudApi.DataManager.GetExcelSheet<ClassJob>(ClientLanguage.Japanese).GetRowOrDefault(id)?.Name.ToString()??$"ジョブ {id}";
+    private static string ActionName(uint id) => DalamudApi.DataManager.GetExcelSheet<Lumina.Excel.Sheets.Action>(ClientLanguage.Japanese).GetRowOrDefault(id)?.Name.ToString()??$"ID {id}";
     private static void LimitNextComboPopup(float maxWidth, float maxHeight)
     {
         var display = ImGui.GetIO().DisplaySize;
@@ -858,7 +859,7 @@ public static class PluginUI
         ImGui.BeginChild("ActionPickerList", new Vector2(0, 270));
         var shown = 0;
         const int maxShown = 250;
-        var actions = DalamudApi.DataManager.GetExcelSheet<Lumina.Excel.Sheets.Action>()
+        var actions = DalamudApi.DataManager.GetExcelSheet<Lumina.Excel.Sheets.Action>(ClientLanguage.Japanese)
             .Where(a => IsSelectablePlayerAction(a, actionPvPOnly))
             .OrderBy(a => ActionSortGroup(a, currentJob))
             .ThenBy(a => a.ClassJobLevel)
@@ -921,7 +922,7 @@ public static class PluginUI
         // ClassJob が実在する戦闘ジョブかを確認する。
         if (action.ClassJob.RowId != 0)
         {
-            var ownerJob = DalamudApi.DataManager.GetExcelSheet<ClassJob>().GetRowOrDefault(action.ClassJob.RowId);
+            var ownerJob = DalamudApi.DataManager.GetExcelSheet<ClassJob>(ClientLanguage.Japanese).GetRowOrDefault(action.ClassJob.RowId);
             if (ownerJob is not { } owner || !IsBattleJobId(owner.RowId))
                 return false;
         }
@@ -955,7 +956,7 @@ public static class PluginUI
         var jobNames = new List<string>();
         if (action.ClassJobCategory.RowId != 0)
         {
-            var category = DalamudApi.DataManager.GetExcelSheet<ClassJobCategory>().GetRowOrDefault(action.ClassJobCategory.RowId);
+            var category = DalamudApi.DataManager.GetExcelSheet<ClassJobCategory>(ClientLanguage.Japanese).GetRowOrDefault(action.ClassJobCategory.RowId);
             if (category is { } c)
             {
                 foreach (var jobId in BattleJobIds)
@@ -1005,7 +1006,7 @@ public static class PluginUI
     {
         if (action.ClassJobCategory.RowId == 0) return false;
 
-        var category = DalamudApi.DataManager.GetExcelSheet<ClassJobCategory>().GetRowOrDefault(action.ClassJobCategory.RowId);
+        var category = DalamudApi.DataManager.GetExcelSheet<ClassJobCategory>(ClientLanguage.Japanese).GetRowOrDefault(action.ClassJobCategory.RowId);
         if (category is not { } c) return false;
 
         // 「共通・ロール技」は戦闘ジョブ用だけを対象にする。
@@ -1027,7 +1028,7 @@ public static class PluginUI
     private static bool ActionSupportsJob(Lumina.Excel.Sheets.Action action, uint jobId)
     {
         if (jobId == 0 || action.ClassJobCategory.RowId == 0) return false;
-        var category = DalamudApi.DataManager.GetExcelSheet<ClassJobCategory>().GetRowOrDefault(action.ClassJobCategory.RowId);
+        var category = DalamudApi.DataManager.GetExcelSheet<ClassJobCategory>(ClientLanguage.Japanese).GetRowOrDefault(action.ClassJobCategory.RowId);
         return category is { } c && CategorySupportsJob(c, jobId);
     }
 
@@ -1043,7 +1044,7 @@ public static class PluginUI
         if (IsSharedOrRoleAction(action)) return "ロール";
         if (action.ClassJob.RowId > 0) return JobName(action.ClassJob.RowId);
 
-        var category = DalamudApi.DataManager.GetExcelSheet<ClassJobCategory>().GetRowOrDefault(action.ClassJobCategory.RowId);
+        var category = DalamudApi.DataManager.GetExcelSheet<ClassJobCategory>(ClientLanguage.Japanese).GetRowOrDefault(action.ClassJobCategory.RowId);
         var categoryName = category?.Name.ToString() ?? string.Empty;
         if (!string.IsNullOrWhiteSpace(categoryName)) return categoryName;
         return IsSharedOrRoleAction(action) ? "共通" : "ジョブ派生";
@@ -1109,7 +1110,7 @@ public static class PluginUI
         ImGui.BeginChild("PlacementActionList", new Vector2(0, listHeight), true);
         var shown = 0;
         const int maxShown = 300;
-        var actions = DalamudApi.DataManager.GetExcelSheet<Lumina.Excel.Sheets.Action>()
+        var actions = DalamudApi.DataManager.GetExcelSheet<Lumina.Excel.Sheets.Action>(ClientLanguage.Japanese)
             .Where(a => IsSelectablePlayerAction(a, placementPvPOnly))
             .OrderBy(a => ActionSortGroup(a, currentJob))
             .ThenBy(a => a.ClassJobLevel)

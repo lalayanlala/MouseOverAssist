@@ -31,7 +31,7 @@ try {
     if ($LASTEXITCODE -ne 0) { throw 'Routing checks failed. Plugin was not built.' }
 
     $buildDir = Join-Path $root ('.build\' + [Guid]::NewGuid().ToString('N'))
-    Write-Host 'Building MouseOverAssist V2.3.14 for FF14 patch 7.57 / Dalamud API 15...' -ForegroundColor Cyan
+    Write-Host 'Building MouseOverAssist V2.3.15 for FF14 patch 7.57 / Dalamud API 15...' -ForegroundColor Cyan
     & dotnet build (Join-Path $root 'MouseOverAssist\MouseOverAssist.csproj') --configuration Release `
         --output $buildDir "-p:DalamudLibPath=$libPath" '-p:EnableWindowsTargeting=true' '-p:TreatWarningsAsErrors=true' '--nologo'
     if ($LASTEXITCODE -ne 0) { throw 'Build failed. Send BUILD_LOG.txt to review the error.' }
